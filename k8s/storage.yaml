@@ -7,8 +7,9 @@ reclaimPolicy: Retain
 volumeBindingMode: Immediate
 allowVolumeExpansion: true
 parameters:
-  skuName: Premium_LRS
+  skuName: Standard_LRS
   kind: Managed
+
 
 ---
 apiVersion: v1

@@ -26,5 +26,5 @@ spec:
               name: http
           env:
             - name: REACT_APP_BACKEND_PROD
-              value: backend-service
+              value: http:/20.234.76.68:82
 

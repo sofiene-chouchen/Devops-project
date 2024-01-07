@@ -20,11 +20,11 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: sofienech/gestion_frontend:38
+          image: sofienech/gestion_frontend:47
           ports:
             - containerPort: 80
               name: http
           env:
             - name: REACT_APP_BACKEND_PROD
-              value: http://20.67.131.237:82
+              value: http://20.234.76.68:82
 

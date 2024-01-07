@@ -4,7 +4,7 @@ metadata:
   name: azure-disk
 provisioner: kubernetes.io/azure-disk
 reclaimPolicy: Retain
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate
 allowVolumeExpansion: true
 parameters:
   skuName: Standard

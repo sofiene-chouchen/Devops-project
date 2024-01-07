@@ -35,7 +35,10 @@ spec:
                   key: database-username
                   name: db
             - name: POSTGRES_PASSWORD
-              value: sofiene
+              valueFrom:
+                secretKeyRef:
+                  key: db-password
+                  name: db-secret
           volumeMounts:
             - mountPath: "/var/lib/postgresql/data"
               name: database-storage

@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: sofienech/gestion_frontend:38
+          image: sofienech/gestion_frontend:55
           ports:
             - containerPort: 80
               name: http

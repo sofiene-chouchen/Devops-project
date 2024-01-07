@@ -25,9 +25,15 @@ spec:
               name: http
           env:
             - name: POSTGRES_DB
-              value: test
+              valueFrom:
+                configMapKeyRef:
+                  key: database-name
+                  name: db
             - name: POSTGRES_USER
-              value: postgres
+              valueFrom:
+                configMapKeyRef:
+                  key: database-username
+                  name: db
             - name: POSTGRES_PASSWORD
               value: sofiene
           volumeMounts:

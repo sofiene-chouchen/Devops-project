@@ -15,7 +15,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     name                = "system"
     node_count          = var.system_node_count
     vm_size             = "Standard_DS2_v2"
-    type                = "AvailabilitySet" # Change to AvailabilitySet
+    type                = "AvailabilitySet"
     enable_auto_scaling = false
   }
 
@@ -25,6 +25,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
 
   network_profile {
     load_balancer_sku = "standard"
-    network_plugin    = "kubenet" # azure (CNI)
+    network_plugin    = "kubenet"
   }
 }

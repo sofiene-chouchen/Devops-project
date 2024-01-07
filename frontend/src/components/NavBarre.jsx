@@ -6,7 +6,7 @@ export default function NavBarre() {
     <div className="bg-vert">
     <Link to={'/'}>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16">
-        <p className="text-white text-3xl py-4 font-mono "> cabinet Podologue </p>
+        <p className="text-white text-3xl py-4 font-mono "> cabinet Podologues </p>
       </div>
     </Link>
      

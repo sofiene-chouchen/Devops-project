@@ -7,7 +7,6 @@ metadata:
     app: database
 spec:
   replicas: 1
-
   selector:
     matchLabels:
       app: database
@@ -43,6 +42,6 @@ spec:
             - mountPath: "/var/lib/postgresql/data"
               name: database-storage
       volumes:
-       - name: database-storage
-         persistentVolumeClaim:
-          claimName: azure-managed-disk-pvc
+        - name: database-storage
+          persistentVolumeClaim:
+            claimName: azure-managed-disk-pvc

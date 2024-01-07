@@ -31,7 +31,7 @@ spec:
             - name: POSTGRES_PASSWORD
               value: sofiene
           volumeMounts:
-            - mountPath: "/var/lib/postgresql/data/test"
+            - mountPath: "/var/lib/postgresql/"
               name: database-storage
       volumes:
        - name: database-storage

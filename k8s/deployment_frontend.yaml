@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: devops-project
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      name: frontend
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: sofienech/gestion_frontend:38
+          ports:
+            - containerPort: 80
+              name: http
+          env:
+            - name: REACT_APP_BACKEND_PROD
+              value: http://20.67.131.237:82
+

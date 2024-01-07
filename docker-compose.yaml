@@ -1,0 +1,31 @@
+version: '3'
+services:
+  backend:
+    container_name: backend
+    image: sofienech/backend:v1
+    ports:
+      - "8000:8000"
+    environment:
+      - SPRING_DATASOURCE_URL:jdbc:postgresql://db:5432/test
+    depends_on:
+      - db
+  frontend:
+    container_name: frontend
+    image: sofienech/frontend:v1
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_BACKEND=backend
+    depends_on:
+      - backend
+  db :
+    container_name: db
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=sofiene
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=test
+
+      

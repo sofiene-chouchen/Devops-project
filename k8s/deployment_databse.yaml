@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: devops-project
+  name: database
+  labels:
+    app: database
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: database
+  template:
+    metadata:
+      name: database
+      labels:
+        app: database
+    spec:
+      containers:
+        - name: database
+          image: postgres:15-alpine
+          ports:
+            - containerPort: 5432
+              name: http
+          env:
+            - name: POSTGRES_DB
+              value: test
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: sofiene

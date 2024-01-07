@@ -108,7 +108,7 @@ export default function Table() {
           {/* Table body */}
           <tbody>
             {currentPageData.map((item) => (
-              <tr key={item._id}>
+              <tr key={item.id}>
                 <td className='border px-6 py-4 whitespace-nowrap'>
                   {item.number}
                 </td>

@@ -7,8 +7,9 @@ reclaimPolicy: Retain
 volumeBindingMode: WaitForFirstConsumer
 allowVolumeExpansion: true
 parameters:
-  counterespionage: Standard
-  kind : Managed
+  skuName: Standard
+  kind: Managed
+
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

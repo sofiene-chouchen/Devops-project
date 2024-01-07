@@ -17,13 +17,6 @@ spec:
       labels:
         app: database
     spec:
-#      initContainers:
-#        - name: init-database
-#          image: alpine:latest
-#          command: [ "sh", "-c", "rm -rf /var/lib/postgresql/data/*" ]
-#          volumeMounts:
-#            - mountPath: "/var/lib/postgresql/data"
-#              name: database-storage
       containers:
         - name: database
           image: postgres:15-alpine

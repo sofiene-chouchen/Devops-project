@@ -30,3 +30,10 @@ spec:
               value: postgres
             - name: POSTGRES_PASSWORD
               value: sofiene
+          volumeMounts:
+            - mountPath: "/var/lib/postgresql/data"
+              name: database-storage
+      volumes:
+       - name: database-storage
+         persistentVolumeClaim:
+          claimName: azure-managed-disk-pvc
